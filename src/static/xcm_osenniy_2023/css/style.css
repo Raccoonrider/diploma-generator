@@ -1,0 +1,76 @@
+@font-face{
+    font-family: Arimo;
+    font-weight: normal;
+    src: url(/static/xcm_osenniy_2023/fonts/Arimo-Regular.ttf)
+}
+@font-face{
+    font-family: Arimo;
+    font-weight: bold;
+    src: url(/static/xcm_osenniy_2023/fonts/Arimo-Bold.ttf)
+}
+
+* {
+    font-family: Arimo;
+    font-size: 20pt;
+    margin-top: 0.1em;
+    margin-bottom: 0;
+}
+
+body{
+    height:100%;
+}
+
+.diploma-head{
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 32pt;
+    margin-top: 0.8em;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+    margin-left: 1em;
+}
+
+.result-highlight{
+    font-size: 26pt;
+    font-weight: bold;
+}
+
+/* .stamp-container{
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.stamp{
+    width: 17%;
+    margin-right: 20%;
+    position:absolute;
+    right: 2em;
+    z-index: 0;
+}
+
+.paw{
+    width: 17%;
+    margin-right: 20%;
+    position:absolute;
+    right: 5em;
+    z-index: -1;
+}
+
+.info-mid{
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+footer{
+    margin-top: 6em;
+}

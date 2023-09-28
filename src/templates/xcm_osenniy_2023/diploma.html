@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="pdfkit-page-size" content="A4"/>
+    <meta name="pdfkit-orientation" content="Portrait"/>
+    <title>{{ result.last_name }} {{ result.first_name }}</title>
+    <link rel="stylesheet" href="/static/xcm_osenniy_2023/css/style.css">
+</head>
+
+<body>
+    <img class="diploma-head" src="/static/xcm_osenniy_2023/img/dimploma-head.svg">
+    <div class="info-top">
+        <p class="text-center">Награждается</p>
+        <h1 class="name">{{ result.last_name }} {{ result.first_name }}</h1>
+        <p class="text-center">за <span class="result-highlight">{{ result.place }}</span> место</p>
+        <p class="text-center">в категории <span class="result-highlight">{{ result.category }}</span></p>
+    </div>
+    <div class="info-mid">
+        <p class="text-left">Дистанция: <span class="result-highlight">{{ result.distance }} км</span></p>
+        <p class="text-left">Время: <span class="result-highlight">{{ result.time }}</span></p>
+    </div>
+    <div class="info-bottom">
+        <img class="paw" src="/static/xcm_osenniy_2023/img/paw.png">
+        <img class="stamp" src="/static/xcm_osenniy_2023/img/stamp.svg">
+        <p class="text-center">велоклуб "Цепная Реакция"</p>
+    </div>
+    <footer>
+        <p class="text-center">Омск, 2023</p>
+    </footer>
+</body>
+
+</html>
