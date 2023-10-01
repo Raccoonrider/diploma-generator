@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  diploma:
+    container_name: diploma
+    build: .
+    ports:
+      - 8001:8001
+    restart: unless-stopped

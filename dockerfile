@@ -1,4 +1,5 @@
-FROM python:3.11-alpine
+FROM surnet/alpine-wkhtmltopdf:3.16.2-0.12.6-full as wkhtmltopdf
+FROM python:3.11-alpine as app
 
 WORKDIR /home
 
@@ -10,8 +11,22 @@ ENV PYTHONUNBUFFERED 1
 ENV PYTHONFAULTHANDLER 1
 
 # Install pre-reqs
-# pdfkit
-RUN apk add wkhtmltopdf
+# wkhtmltopdf dependencies
+RUN apk add --no-cache \
+        libstdc++ \
+        libx11 \
+        libxrender \
+        libxext \
+        libssl1.1 \
+        ca-certificates \
+        fontconfig \
+        freetype \
+        ttf-droid \
+        ttf-freefont \
+        ttf-liberation \
+        ;
+# wkhtmltopdf copy bins from ext image
+COPY --from=wkhtmltopdf /bin/wkhtmltopdf /bin/libwkhtmltox.so /bin/
 
 # Install tools
 RUN apk add nano
@@ -25,7 +40,6 @@ RUN pipenv install --deploy --system
 
 # Install application
 COPY . .
-RUN chmod 0644 crontab
 
 # Create user and set ownership
 RUN addgroup -S user && adduser -S user -G user && chown -R user:user .
