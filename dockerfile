@@ -11,7 +11,7 @@ ENV PYTHONFAULTHANDLER 1
 
 # Install pre-reqs
 # pdfkit
-RUN apk install wkhtmltopdf
+RUN apk add wkhtmltopdf
 
 # Install tools
 RUN apk add nano
