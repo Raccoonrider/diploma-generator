@@ -17,7 +17,8 @@ def xcm_osenniy_2023_html(user_id):
 
 @app.route("/xcm_kabanova/2023/<int:user_id>/pdf/")
 def xcm_osenniy_2023_pdf(user_id):
-    html_url = request.base_url.replace("pdf", "html").replace("http", "https")
+    # Note: use absolute URL. Wkhtmltopdf does not work with relative urls on the same server (why?)
+    html_url = f"https://brevet.omskvelo.ru/diploma/xcm_kabanova/2023/{user_id}/html/"
     pdf = pdfkit.from_url(html_url)
 
     return Response(pdf, mimetype="application/pdf")
