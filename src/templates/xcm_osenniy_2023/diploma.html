@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!-- Note: use absolute URLS. Wkhtmltopdf does not work with relative urls on the same server (why?) -->
+<!-- Note: Wkhtmltopdf does not support CSS Grid and Flexbox -->
 <html>
 <head>
     <meta name="pdfkit-page-size" content="A4"/>
@@ -17,19 +18,26 @@
         <p class="text-center">в категории <span class="result-highlight">{{ result.category }}</span></p>
     </div>
     <div class="info-mid">
-        <div class="grid-cell" style="grid-column: 1; grid-row: 1;">
-            <p>Дистанция:</p>
-        </div>
-        <div class="grid-cell" style="grid-column: 2; grid-row: 1;">
-            <p class="result-highlight">{{ result.distance }} км </p>
-        </div>
-        <div class="grid-cell" style="grid-column: 1; grid-row: 2;">
-            <p>Время:</p>
-        </div>
-        <div class="grid-cell" style="grid-column: 2; grid-row: 2;" >
-            <p class="result-highlight">{{ result.time }}</p>
-        </div>
-
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Дистанция:</p>
+                    </td>
+                    <td>
+                        <p class="result-highlight text-left">{{ result.distance }} км </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Время:</p>
+                    </td>
+                    <td>
+                        <p class="result-highlight text-left">{{ result.time }}</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div class="info-bottom">
         <img class="paw" src="https://brevet.omskvelo.ru/diploma/static/xcm_osenniy_2023/img/paw.png">
