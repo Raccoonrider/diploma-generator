@@ -3,12 +3,12 @@
 @font-face{
     font-family: Arimo;
     font-weight: normal;
-    src: url(https://brevet.omskvelo.ru/static/xcm_osenniy_2023/fonts/Arimo-Regular.ttf)
+    src: url(https://brevet.omskvelo.ru/diploma/static/xcm_osenniy_2023/fonts/Arimo-Regular.ttf)
 }
 @font-face{
     font-family: Arimo;
     font-weight: bold;
-    src: url(https://brevet.omskvelo.ru/static/xcm_osenniy_2023/fonts/Arimo-Bold.ttf)
+    src: url(https://brevet.omskvelo.ru/diploma/static/xcm_osenniy_2023/fonts/Arimo-Bold.ttf)
 }
 
 * {
