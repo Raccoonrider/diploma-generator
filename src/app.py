@@ -4,13 +4,13 @@ import io
 from flask import Flask, Response, request, abort, render_template
 import pdfkit
 
-from models import Mock as Result
+from models import XCM_osenniy
 
 app = Flask(__name__)
 
 @app.route("/xcm_kabanova/2023/<int:user_id>/html/")
 def xcm_osenniy_2023_html(user_id):
-    result = Result.get(user_id)
+    result = XCM_osenniy.get(user_id)
     if result is None: abort(404)
 
     return render_template('xcm_osenniy_2023/diploma.html', result=result)
