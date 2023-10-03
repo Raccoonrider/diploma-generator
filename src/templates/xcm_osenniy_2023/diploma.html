@@ -17,8 +17,19 @@
         <p class="text-center">в категории <span class="result-highlight">{{ result.category }}</span></p>
     </div>
     <div class="info-mid">
-        <p class="text-left">Дистанция: <span class="result-highlight">{{ result.distance }} км</span></p>
-        <p class="text-left">Время: <span class="result-highlight">{{ result.time }}</span></p>
+        <div class="grid-cell" style="grid-column: 1; grid-row: 1;">
+            <p>Дистанция:</p>
+        </div>
+        <div class="grid-cell" style="grid-column: 2; grid-row: 1;">
+            <p class="result-highlight">{{ result.distance }} км </p>
+        </div>
+        <div class="grid-cell" style="grid-column: 1; grid-row: 2;">
+            <p>Время:</p>
+        </div>
+        <div class="grid-cell" style="grid-column: 2; grid-row: 2;" >
+            <p class="result-highlight">{{ result.time }}</p>
+        </div>
+
     </div>
     <div class="info-bottom">
         <img class="paw" src="https://brevet.omskvelo.ru/diploma/static/xcm_osenniy_2023/img/paw.png">

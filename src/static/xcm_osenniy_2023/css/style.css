@@ -65,7 +65,16 @@ h1 {
 
 .info-mid{
     margin-top: 3em;
+    display: grid;
+    column-gap: 0.5em;
+    justify-content: center;
     margin-bottom: 2em;
+}
+
+.grid-cell{
+    display:flex;
+    justify-content: end;
+    flex-direction: column;
 }
 
 footer{
