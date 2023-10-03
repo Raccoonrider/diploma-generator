@@ -34,7 +34,7 @@ class XCM_osenniy:
     @classmethod
     def get(cls,id):
         try:
-            row = cls.data[id]
+            row = cls.data[id-1]
             instance = cls()
             instance.id = id
             instance.place = row[0]
