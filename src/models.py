@@ -6,7 +6,7 @@ from datetime import time
 
 def get_csv(path):
     with codecs.open(path, encoding="cp1251") as file:
-        reader = csv.reader(file, delimiter=',', dialect='excel')
+        reader = csv.reader(file, delimiter=';', dialect='excel')
         data = [x for x in reader]
         return data
 
