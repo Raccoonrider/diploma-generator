@@ -45,4 +45,4 @@ COPY . .
 RUN addgroup -S user && adduser -S user -G user && chown -R user:user .
 USER user
 
-ENTRYPOINT hypercorn src/app:app --bind 0.0.0.0:8001
+ENTRYPOINT hypercorn src/app:app --bind 0.0.0.0:8001 -w 5
