@@ -5,13 +5,17 @@
 <head>
     <meta name="pdfkit-page-size" content="A4"/>
     <meta name="pdfkit-orientation" content="Portrait"/>
+    <meta name="margin-top" content="0in"/>
+    <meta name="margin-right" content="0in"/>
+    <meta name="margin-bottom" content="0in"/>
+    <meta name="margin-left" content="0in"/>
     <title>{{ result.name }}</title>
     <link rel="stylesheet" href="https://brevet.omskvelo.ru/diploma/static/triathlon/css/style.css">
 </head>
 
 <body>
     <div class="info-top">
-        <img class="logo-top" src="https://brevet.omskvelo.ru/diploma/static/triathlon/img/ftr.webp">
+        <img class="logo-top" src="https://brevet.omskvelo.ru/diploma/static/triathlon/img/ftr.png">
         <h2>{{ result.event }}</h2>
         <h4>{{ result.event_detail }}</h4>
     </div>
@@ -25,7 +29,7 @@
         <p>Дистанция: {{ result.result }}</p>
     </div>
     <footer>
-        <img class="logo-bottom" src="https://brevet.omskvelo.ru/diploma/static/triathlon/img/3omsk.webp">
+        <img class="logo-bottom" src="https://brevet.omskvelo.ru/diploma/static/triathlon/img/3omsk.png">
         <h4>2024</h4>
     </footer>
 </body>
