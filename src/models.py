@@ -34,7 +34,7 @@ class XCM_osenniy:
     @classmethod
     def get(cls,id):
         try:
-            row = cls.data[id-1]
+            row = cls.data[id]
             instance = cls()
             instance.id = id
             instance.place = row[0]
@@ -46,6 +46,29 @@ class XCM_osenniy:
             instance.distance = row[5]
             instance.time = row[7]
 
+            return instance
+        except Exception:
+            logging.exception(f"Could not load result {id}")
+
+class Triathlon:
+    data = get_csv(os.getcwd() + "/src/data/triathlon/data.csv")
+    logging.debug(f"Data loaded: {data}")
+    logging.info(f"Results for Triathlon loaded: {len(data)}")
+
+    @classmethod
+    def get(cls,id):
+        try:
+            row = cls.data[id-1]
+            instance = cls()
+            instance.id = id
+            instance.event = row[0]
+            instance.event_detail = row[1]
+            instance.category = row[2]
+            instance.distance = row[3]
+            instance.place = row[4]
+            instance.number = row[5]
+            instance.name = row[6]
+            instance.result = row[-2]
             return instance
         except Exception:
             logging.exception(f"Could not load result {id}")

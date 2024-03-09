@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Note: use absolute URLS. Wkhtmltopdf does not work with relative urls on the same server (why?) -->
+<!-- Note: Wkhtmltopdf does not support CSS Grid and Flexbox -->
+<html>
+<head>
+    <meta name="pdfkit-page-size" content="A4"/>
+    <meta name="pdfkit-orientation" content="Portrait"/>
+    <title>{{ result.name }}</title>
+    <link rel="stylesheet" href="https://brevet.omskvelo.ru/diploma/static/triathlon/css/style.css">
+</head>
+
+<body>
+    <div class="info-top">
+        <img class="logo-top" src="https://brevet.omskvelo.ru/diploma/static/triathlon/img/ftr.webp">
+        <h2>{{ result.event }}</h2>
+        <h4>{{ result.event_detail }}</h4>
+    </div>
+    <div class="info-mid">
+        <h1>ДИПЛОМ</h1>
+        <h2>{{ result.name }}</h2>
+        <h2>{{ result.place }} место</h2>
+        <h3 class="category">Категория: {{ result.category }}</h3>
+        <p></p>
+        <p>Дистанция: {{ result.distance}}</p>
+        <p>Дистанция: {{ result.result }}</p>
+    </div>
+    <footer>
+        <img class="logo-bottom" src="https://brevet.omskvelo.ru/diploma/static/triathlon/img/ftr.webp">
+        <h4>2024</h4>
+    </footer>
+</body>
+
+</html>
