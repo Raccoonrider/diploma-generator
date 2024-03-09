@@ -33,9 +33,9 @@ def triathlon_html(id):
 
 
 @app.route("/triathlon/<int:id>")
-def triathlon_html(id):
+def triathlon_pdf(id):
     # Note: use absolute URL. Wkhtmltopdf does not work with relative urls on the same server (why?)
     html_url = f"https://brevet.omskvelo.ru/diploma/triathlon/{id}/html/"
     pdf = pdfkit.from_url(html_url)
-    
+
     return Response(pdf, mimetype="application/pdf")
