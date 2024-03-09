@@ -1,32 +1,4 @@
-FROM surnet/alpine-wkhtmltopdf:3.16.2-0.12.6-full as wkhtmltopdf
-FROM python:3.11-alpine as app
-
-WORKDIR /home
-
-# Setup environment
-ENV LANG C.UTF-8
-ENV LC_ALL C.UTF-8
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-ENV PYTHONFAULTHANDLER 1
-
-# Install pre-reqs
-# wkhtmltopdf dependencies
-RUN apk add --no-cache \
-        libstdc++ \
-        libx11 \
-        libxrender \
-        libxext \
-        libssl3 \
-        ca-certificates \
-        fontconfig \
-        freetype \
-        ttf-droid \
-        ttf-freefont \
-        ttf-liberation \
-        ;
-# wkhtmltopdf copy bins from ext image
-COPY --from=wkhtmltopdf /bin/wkhtmltopdf /bin/libwkhtmltox.so /bin/
+FROM surnet/alpine-python-wkhtmltopdf as wkhtmltopdf
 
 # Install tools
 RUN apk add nano
