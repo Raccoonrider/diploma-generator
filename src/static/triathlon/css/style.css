@@ -9,8 +9,7 @@
 * {
     font-family: Red-October;
     font-size: 20pt;
-    margin-top: 0.1em;
-    margin-bottom: 0;
+    margin:0;
 }
 
 body{
@@ -68,7 +67,7 @@ h3 {
     background-color: #FFF;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1em;
+    margin-bottom: 1.7em;
 }
 
 .info-mid{
@@ -77,7 +76,7 @@ h3 {
     background-color: #cccccc;
     margin: 0;
     padding-top: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 2.5em;
 }
 
 .category{
@@ -86,5 +85,5 @@ h3 {
 
 footer{
     text-align: center;
-    margin-top: 2em;
+    margin-top: 2.5em;
 }
