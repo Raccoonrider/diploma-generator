@@ -1,4 +1,13 @@
-FROM surnet/alpine-python-wkhtmltopdf as wkhtmltopdf
+FROM surnet/alpine-python-wkhtmltopdf:3.11.4-0.12.6-small as wkhtmltopdf
+
+WORKDIR /home
+
+# Setup environment
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV PYTHONFAULTHANDLER 1
 
 # Install tools
 RUN apk add nano
