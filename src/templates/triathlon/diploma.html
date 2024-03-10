@@ -17,10 +17,15 @@
     </div>
     <div class="info-mid">
         <h1>ДИПЛОМ</h1>
-        <h2>{{ result.name }}</h2>
+        {% if result.names | length > 1 %}
+            {% for name in result.names %}
+                <h3 class="multi-name">{{ name }}</h3>
+            {% endfor %}
+        {% else %}
+            <h2>{{ result.names.0 }}</h2>
+        {% endif %}
         <h2>{{ result.place }} место</h2>
         <h3 class="category">Категория: {{ result.category }}</h3>
-        <p></p>
         <p>Дистанция: {{ result.distance}}</p>
         <p>Время: {{ result.result }}</p>
     </div>

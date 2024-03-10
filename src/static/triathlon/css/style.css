@@ -47,10 +47,10 @@ h3 {
     margin-bottom: 0.8em;
 }
 
-h3 {
+.multi-name {
     text-align: center;
     font-weight: normal;
-    font-size: 24pt;
+    margin: 0.1em;
 }
 
 .text-center{

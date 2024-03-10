@@ -67,7 +67,7 @@ class Triathlon:
             instance.category = row[3]
             instance.place = row[4]
             instance.number = row[5]
-            instance.name = row[6]
+            instance.names = row[6].split(",")
             instance.result = row[-1]
             return instance
         except Exception:
