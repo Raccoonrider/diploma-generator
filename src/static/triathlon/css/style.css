@@ -93,7 +93,7 @@ footer{
     margin-top: 3.5em;
 }
 
-footer-multiline{
+footer.multiline{
     text-align: center;
     margin-top: 2.5em;
 }

@@ -17,6 +17,7 @@
     </div>
     <div class="info-mid">
         <h1>ДИПЛОМ</h1>
+
         {% if result.names | length > 1 %}
             {% for name in result.names %}
                 <h3 class="multi-name">{{ name }}</h3>
@@ -24,12 +25,19 @@
         {% else %}
             <h2>{{ result.names.0 }}</h2>
         {% endif %}
+
         <h2>{{ result.place }} место</h2>
-        <h3 class="category">Категория: {{ result.category }}</h3>
+
+        {% if result.names | length > 1 %}
+            <h3 class="category-multiline">Категория: {{ result.category }}</h3>
+        {% else %}
+            <h3 class="category">Категория: {{ result.category }}</h3>
+        {% endif %}
+        
         <p>Дистанция: {{ result.distance}}</p>
         <p>Время: {{ result.result }}</p>
     </div>
-    <footer>
+    <footer{% if result.names | length > 1 %} class="multiline" {% endif %}>
         <img class="logo-bottom" src="https://brevet.omskvelo.ru/diploma/static/triathlon/img/3omsk.png">
         <h3>2024</h3>
     </footer>
