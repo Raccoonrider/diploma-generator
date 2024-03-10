@@ -84,7 +84,16 @@ h3 {
     margin-bottom: 3em;
 }
 
+.category-multiline{
+    margin-bottom: 1em;
+}
+
 footer{
     text-align: center;
     margin-top: 3.5em;
+}
+
+footer-multiline{
+    text-align: center;
+    margin-top: 2.5em;
 }
